@@ -1,13 +1,15 @@
 (function(){
   'use strict';
 
+  var api_key = "cdwxq4soa7q4zuavbtynj8wx";
+  var apiBaseUrl = "https://openapi.etsy.com/v2/listings/active.js?&limit=12&includes=Images,Shop:1&api_key="+api_key;
+  var etsyURL = apiBaseUrl;
+
   $(document).ready(function(){
     $( "#etsy-search" ).on("submit", function(event) {
         event.preventDefault();
         var terms =  $(this).find('#etsy-terms').val().replace(/ /g, '+');
-        var api_key = "cdwxq4soa7q4zuavbtynj8wx";
-        var etsyURL = "https://openapi.etsy.com/v2/listings/active.js?keywords="+
-        terms+"&limit=12&includes=Images,Shop:1&api_key="+api_key;
+        etsyURL = apiBaseUrl + '&keywords=' + terms;
         // console.log(etsyURL);
 
       $.ajax({
@@ -37,6 +39,35 @@
       });
     }
 
+
+    $('.sort-dropdown').on('change', function(event){
+      var sortBy = $(this).val();
+      var sortOn = null;
+      var sortOrder = 'down';
+      switch (sortBy){
+        case "relevancy":
+          sortOn = 'score';
+          break;
+        case 'recent':
+          sortOn = 'created';
+          break;
+        case 'highest':
+          sortOn = 'price';
+          sortOrder = 'down';
+          break;
+        case 'lowest':
+          sortOn = 'price';
+          sortOrder = 'up';
+          break;
+      }
+      var sortingParams = '&sort_on=' + sortOn + '&sort_order=' + sortOrder;
+      console.log(etsyURL + sortingParams);
+      $.ajax({
+        url: etsyURL + sortingParams,
+        type: 'GET',
+        dataType: 'jsonp',
+      }).done(renderData);
+    });
 
 
 // $(".sort-dropdown").change(function(sort) {
