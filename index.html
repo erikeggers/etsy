@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Etsy</title>
+  <link rel="stylesheet" href="styles/main.css">
+</head>
+<body>
+
+<header>
+  <span class="etsy-logo">Etsy</span>
+  <div class="sort-menu">
+    <span class="sort-by">Sort By:</span>
+    <select class="sort-dropdown">
+      <option value="highest" selected="highest">Highest Price</option>
+      <option value="lowest" selected="lowest">Lowest Price</option>
+    </select>
+  </div>
+
+  <form id="etsy-search">
+    <input id="etsy-terms" size="32">
+    <button>Search</button>
+  </form>
+
+</header>
+
+<div class="data"></div>
+
+<script src="scripts/bower_components/jquery/dist/jquery.js"></script>
+<script src="scripts/bower_components/underscore/underscore.js"></script>
+
+
+<script type="text/template" data-template-name="display-items">
+  <div class="container">
+      <a href="<% titleURL %>"><img class="item-image" src="<% image %>"/><a>
+      <a class="item-title" href="<% titleURL %>">
+        <p> <% title %> </p>
+      </a>
+    <div class="shop-info">
+      <a class="item-shop" href="">
+        <p> <% shopName %> </p>
+      </a>
+      <p class="item-price"> <% price %> <% currency %> </p>
+    </div>
+  </div>
+
+</script>
+
+<script type="text/javascript" src="scripts/data.js"></script>
+<script type="text/javascript" src="scripts/main.js"></script>
+</body>
+</html>
