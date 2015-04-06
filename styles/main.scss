@@ -3,8 +3,8 @@ $visual-grid: false;
 $gutter: em(43px);
 @import 'neat/neat';
 
-$mobile: new-breakpoint(max-width 849px);
-$desktop: new-breakpoint(min-width 850px);
+$mobile: new-breakpoint(max-width 949px);
+$desktop: new-breakpoint(min-width 950px);
 
 body {
   margin: 0;
