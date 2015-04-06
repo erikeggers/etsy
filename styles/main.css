@@ -21,7 +21,7 @@ header {
   background-color: #fff;
   width: 100%;
   height: 82px; }
-  @media screen and (max-width: 949px) {
+  @media screen and (max-width: 849px) {
     header {
       height: 180px; } }
   header .header-container {
@@ -42,7 +42,7 @@ header {
     font-size: 40px; }
     header .etsy-logo:last-child {
       margin-right: 0; }
-    @media screen and (max-width: 949px) {
+    @media screen and (max-width: 849px) {
       header .etsy-logo {
         float: left;
         display: block;
@@ -96,12 +96,12 @@ header {
     height: 35px;
     color: gray;
     font-size: 14px; }
-    @media screen and (max-width: 949px) {
+    @media screen and (max-width: 849px) {
       .etsy-search .etsy-terms {
         width: 75%; } }
     .etsy-search .etsy-terms:focus {
       outline: none; }
-  @media screen and (max-width: 949px) {
+  @media screen and (max-width: 849px) {
     .etsy-search {
       float: left;
       display: block;
@@ -119,7 +119,7 @@ header {
   margin-left: 17.22383%; }
   .sort-menu:last-child {
     margin-right: 0; }
-  @media screen and (max-width: 949px) {
+  @media screen and (max-width: 849px) {
     .sort-menu {
       float: left;
       display: block;
@@ -148,7 +148,7 @@ header {
   width: 120px;
   color: gray;
   font-size: 14px; }
-  @media screen and (max-width: 949px) {
+  @media screen and (max-width: 849px) {
     .sort-dropdown {
       margin-top: 20px; } }
   .sort-dropdown:focus {
@@ -163,7 +163,7 @@ header {
     clear: both;
     content: "";
     display: table; }
-  @media screen and (max-width: 949px) {
+  @media screen and (max-width: 849px) {
     .data {
       margin-top: 231px; } }
 
