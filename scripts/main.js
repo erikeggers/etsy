@@ -6,9 +6,9 @@
   var etsyURL = apiBaseUrl;
 
   $(document).ready(function(){
-    $( "#etsy-search" ).on("submit", function(event) {
+    $( "#etsySearch" ).on("submit", function(event) {
         event.preventDefault();
-        var terms =  $(this).find('#etsy-terms').val().replace(/ /g, '+');
+        var terms =  $(this).find('#etsyTerms').val().replace(/ /g, '+');
         etsyURL = apiBaseUrl + '&keywords=' + terms;
         // console.log(etsyURL);
 

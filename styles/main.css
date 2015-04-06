@@ -21,59 +21,113 @@ header {
   background-color: #fff;
   width: 100%;
   height: 82px; }
+  @media screen and (max-width: 849px) {
+    header {
+      height: 180px; } }
+  header .header-container {
+    max-width: 90%;
+    margin-left: auto;
+    margin-right: auto; }
+    header .header-container::after {
+      clear: both;
+      content: "";
+      display: table; }
   header .etsy-logo {
     float: left;
     display: block;
     margin-right: 3.34299%;
     width: 5.26893%;
     margin-top: 22px;
-    margin-left: 100px;
     color: #db4b14;
     font-size: 40px; }
     header .etsy-logo:last-child {
       margin-right: 0; }
+    @media screen and (max-width: 849px) {
+      header .etsy-logo {
+        float: left;
+        display: block;
+        margin-right: 3.34299%;
+        width: 31.10467%;
+        margin-top: 12px;
+        color: #db4b14;
+        font-size: 30px; }
+        header .etsy-logo:last-child {
+          margin-right: 0; }
+        header .etsy-logo:nth-child(2n) {
+          margin-right: 0; }
+        header .etsy-logo:nth-child(2n+1) {
+          clear: left; } }
 
-#etsy-terms {
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  -ms-appearance: none;
-  -o-appearance: none;
-  appearance: none;
-  margin-top: 25px;
-  margin-bottom: 13px;
-  margin-left: -20px;
-  border: 1px #bcb7b3 solid;
-  border-radius: 3%;
-  padding: 10px;
-  width: 260px;
-  height: 35px;
-  color: gray;
-  font-size: 14px; }
-  #etsy-terms:focus {
-    outline: none; }
-
-#etsy-search button {
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  -ms-appearance: none;
-  -o-appearance: none;
-  appearance: none;
-  margin-top: 25px;
-  margin-bottom: 13px;
-  margin-left: -6px;
-  border: 1px #61b4ce solid;
-  border-radius: 3%;
-  background-color: #61b4ce;
-  padding: 5px;
-  width: 83px;
-  height: 35px;
-  color: white;
-  font-size: 14px;
-  font-weight: 700; }
+.etsy-search {
+  float: left;
+  display: block;
+  margin-right: 3.34299%;
+  width: 48.32851%;
+  margin-top: 25px; }
+  .etsy-search:last-child {
+    margin-right: 0; }
+  .etsy-search button {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    -ms-appearance: none;
+    -o-appearance: none;
+    appearance: none;
+    margin-bottom: 13px;
+    margin-left: -6px;
+    border: 1px #61b4ce solid;
+    border-radius: 3%;
+    background-color: #61b4ce;
+    padding: 5px;
+    width: 83px;
+    height: 35px;
+    color: white;
+    font-size: 14px;
+    font-weight: 700; }
+  .etsy-search .etsy-terms {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    -ms-appearance: none;
+    -o-appearance: none;
+    appearance: none;
+    border: 1px #bcb7b3 solid;
+    border-radius: 3%;
+    padding: 10px;
+    width: 260px;
+    height: 35px;
+    color: gray;
+    font-size: 14px; }
+    @media screen and (max-width: 849px) {
+      .etsy-search .etsy-terms {
+        width: 75%; } }
+    .etsy-search .etsy-terms:focus {
+      outline: none; }
+  @media screen and (max-width: 849px) {
+    .etsy-search {
+      float: left;
+      display: block;
+      margin-right: 3.34299%;
+      width: 100%;
+      margin-top: 20px; }
+      .etsy-search:last-child {
+        margin-right: 0; } }
 
 .sort-menu {
-  position: absolute;
-  right: 100px; }
+  float: left;
+  display: block;
+  margin-right: 3.34299%;
+  width: 22.49276%;
+  margin-left: 17.22383%; }
+  .sort-menu:last-child {
+    margin-right: 0; }
+  @media screen and (max-width: 849px) {
+    .sort-menu {
+      float: left;
+      display: block;
+      margin-right: 3.34299%;
+      width: 100%;
+      margin-left: 0%; }
+      .sort-menu:last-child {
+        margin-right: 0; } }
 
 .sort-by {
   margin-right: 5px;
@@ -94,6 +148,9 @@ header {
   width: 120px;
   color: gray;
   font-size: 14px; }
+  @media screen and (max-width: 849px) {
+    .sort-dropdown {
+      margin-top: 20px; } }
   .sort-dropdown:focus {
     outline: none; }
 
@@ -106,6 +163,9 @@ header {
     clear: both;
     content: "";
     display: table; }
+  @media screen and (max-width: 849px) {
+    .data {
+      margin-top: 231px; } }
 
 .container {
   float: left;
