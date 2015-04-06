@@ -1,7 +1,10 @@
 @import 'bourbon/bourbon';
-$visual-grid: false;
+$visual-grid: true;
 $gutter: em(43px);
 @import 'neat/neat';
+
+$mobile: new-breakpoint(max-width 849px);
+$desktop: new-breakpoint(min-width 850px);
 
 body {
   margin: 0;
@@ -18,53 +21,82 @@ header {
   background-color: #fff;
   width: 100%;
   height: 82px;
+  
+  @include media($mobile){
+    height: 180px;
+  }
 
-  .etsy-logo {
+  .header-container {
+    @include outer-container(90%);
+  }
+  .etsy-logo { 
     @include span-columns(1);
     margin-top: 22px;
-    margin-left: 100px;
     color: #db4b14;
     font-size: 40px;
+    
+    @include media($mobile){
+      @include span-columns(4);
+      @include omega(2n);
+      margin-top: 12px;
+      color: #db4b14;
+      font-size: 30px;
+    }
   }
 }
 
-#etsy-terms {
-  @include appearance(none);
+.etsy-search {
+  @include span-columns(6);
   margin-top: 25px;
-  margin-bottom: 13px;
-  margin-left: -20px;
-  border: 1px #bcb7b3 solid;
-  border-radius: 3%;
-  padding: 10px;
-  width: 260px;
-  height: 35px;
-  color: gray;
-  font-size: 14px;
-
-  &:focus {
-    outline: none;
+  
+    button {
+    @include appearance(none);
+    margin-bottom: 13px;
+    margin-left: -6px;
+    border: 1px #61b4ce solid;
+    border-radius: 3%;
+    background-color: #61b4ce;
+    padding: 5px;
+    width: 83px;
+    height: 35px;
+    color: white;
+    font-size: 14px;
+    font-weight: 700;
   }
-}
 
-#etsy-search button {
-  @include appearance(none);
-  margin-top: 25px;
-  margin-bottom: 13px;
-  margin-left: -6px;
-  border: 1px #61b4ce solid;
-  border-radius: 3%;
-  background-color: #61b4ce;
-  padding: 5px;
-  width: 83px;
-  height: 35px;
-  color: white;
-  font-size: 14px;
-  font-weight: 700;
+  .etsy-terms {
+    @include appearance(none);
+    border: 1px #bcb7b3 solid;
+    border-radius: 3%;
+    padding: 10px;
+    width: 260px;
+    height: 35px;
+    color: gray;
+    font-size: 14px;
+
+    @include media($mobile) {
+      width: 75%;
+    }
+    
+    &:focus {
+      outline: none;
+    }
+  }
+  
+  @include media($mobile) {
+   @include span-columns(12);
+    margin-top: 20px;
+  }
 }
 
 .sort-menu {
-  position: absolute;
-  right: 100px;
+  @include span-columns(3);
+  @include shift(2);
+  @include media($mobile) {
+   @include span-columns(12);
+   @include shift(0);
+
+  }
 }
 
 .sort-by {
@@ -83,6 +115,10 @@ header {
   width: 120px;
   color: gray;
   font-size: 14px;
+  
+  @include media($mobile) {
+    margin-top: 20px;
+  }
 
   &:focus {
     outline: none;
@@ -92,6 +128,10 @@ header {
 .data {
   @include outer-container(728px);
   margin-top: 131px;
+  
+  @include media($mobile) {
+    margin-top: 231px;
+  }
 }
 
 .container {

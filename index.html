@@ -9,22 +9,22 @@
 <body>
 
 <header>
+  <div class="header-container">
   <span class="etsy-logo">Etsy</span>
-  <div class="sort-menu">
-    <span class="sort-by">Sort By:</span>
-    <select class="sort-dropdown">
-      <option value="recent" selected>Most Recent</option>
-      <option value="relevancy">Relevancy</option>
-      <option value="highest">Highest Price</option>
-      <option value="lowest">Lowest Price</option>
-    </select>
-  </div>
-
-  <form id="etsy-search">
-    <input id="etsy-terms" size="32">
+  <form class="etsy-search" id="etsySearch">
+    <input class="etsy-terms" id="etsyTerms" size="32">
     <button>Search</button>
   </form>
-
+    <div class="sort-menu">
+      <span class="sort-by">Sort By:</span>
+      <select class="sort-dropdown">
+        <option value="recent" selected>Most Recent</option>
+        <option value="relevancy">Relevancy</option>
+        <option value="highest">Highest Price</option>
+        <option value="lowest">Lowest Price</option>
+      </select>
+    </div>
+  </div>
 </header>
 
 <div class="data"></div>
